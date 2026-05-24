@@ -1,0 +1,134 @@
+:root {
+  --main-backround: #07162e;
+  --secondary-background: #131c31;
+  --card-backround: #1a2440;
+  --main-border-color: #26324d;
+  --main-text-color: #f7faff;
+  --secondary-text-color: #cbd5e1;
+  --muted-text-color: #94a3b8;
+  --disabled-text-color: #64748b;
+  --accent-color: #6bfccc;
+  --hover-color: #60a5fa;
+  --hover-color: #8ffad6;
+  --btn-radius: 0.5rem;
+  --btn-padding: 1rem 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: var(--main-backround);
+  color: var(--main-text-color);
+  padding: 0 1rem;
+}
+
+h1 {
+  /* dont forget to use calc - fluid size */
+  font-size: 6rem;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  /* display: inline-block; */
+}
+
+a:hover {
+  color: var(--primary-text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 96px 24px; */
+}
+
+.btn {
+  background: var(--accent-color);
+  color: var(--main-backround);
+  border-radius: var(--btn-radius);
+  padding: var(--btn-padding);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background 250ms ease-in-out;
+}
+
+.btn:hover {
+  background: var(--hover-color);
+  color: var(--main-backround);
+}
+
+/* Main Header */
+.nav-header {
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.nav-header nav,
+.nav-header ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header nav {
+  justify-content: space-between;
+}
+
+.nav-header nav ul {
+  gap: 2rem;
+}
+
+.logo {
+  max-width: 2.5rem;
+  color: var(--hover-color);
+}
+
+/* The Showcase */
+.showcase-header {
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 300vh;
+}
+
+.showcase-header .buttom-content {
+  max-width: 600px;
+  align-self: flex-end;
+  margin-top: 2.5rem;
+}
+
+.showcase-header p {
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.btn-portfolio {
+  border-radius: 2rem;
+}
+
+/* .arrow {
+  font-size: 2rem;
+  margin-left: 0.25rem;
+} */
