@@ -61,6 +61,14 @@
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/df3f599608.js"
@@ -85,10 +93,10 @@
           </a>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Why me</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#why-me">Why me</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -108,7 +116,6 @@
               HTML, CSS, JavaScript, and React. Focused on clean UI,
               performance, and modern frontend development practices.
             </p>
-            <!-- <div class="hero-line"></div> -->
             <div class="hero-cta">
               <a href="#" class="btn btn-portfolio"
                 ><i class="fa-solid fa-arrow-right"></i
@@ -119,53 +126,73 @@
           </div>
         </header>
 
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
-            <h2>About me</h2>
             <div class="about-wrapper">
               <div class="about-content">
-                <p>
+                <h2>About Me</h2>
+                <p class="bio">
                   I’m a frontend developer focused on building clean,
                   responsive, and user-friendly web experiences using HTML, CSS,
                   JavaScript, and React.
                 </p>
-                <p>
+                <p class="bio">
                   I enjoy transforming ideas into modern interfaces with
                   attention to performance, responsiveness, and user experience.
                   I continuously improve my skills by building real projects,
                   learning modern frontend practices, and exploring technologies
                   like React and Tailwind CSS.
                 </p>
-                <p>
+                <p class="bio">
                   Currently looking for my first opportunity where I can
                   contribute, grow with a strong team, and deliver impactful
                   digital experiences.
                 </p>
-                <div class="skills">
-                  <h3>My skills:</h3>
-                  <ul>
-                    <li>HTML (HTML5)</li>
-                    <li>CSS (CSS3)</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React</li>
-                    <li>Tailwind CSS</li>
+                <div class="line"></div>
+                <div class="more-info">
+                  <div class="more-info-content">
+                    <div>
+                      <h4>Who</h4>
+                      <p>Abdelkarim Nakkahi</p>
+                    </div>
+                    <div>
+                      <h4>What</h4>
+                      <p>Frontend Developer</p>
+                    </div>
+                    <div>
+                      <h4>Where</h4>
+                      <p>Marrakech, Morocco | Remote | Relocation</p>
+                    </div>
+                    <div>
+                      <h4>Speciality</h4>
+                      <p>Responsive & Accessible Web Interfaces</p>
+                    </div>
+                    <div>
+                      <h4>Skills</h4>
+                      <p>
+                        HTML(HTML5), CSS(CSS3), JavaScript, React, Tailwind,
+                        Responsive Web Design, Axios, Git & Github, Wordpress
+                      </p>
+                    </div>
+                    <div>
+                      <h4>Status</h4>
+                      <p>Available</p>
+                    </div>
+                  </div>
 
-                    <li>Axios</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Wordpress</li>
-                    <li>Responsive web design</li>
-                  </ul>
+                  <div class="more-info-image">
+                    <img
+                      src="./assets/images/abdelkarim-nakkahi-frontend-developer.webp"
+                      alt="Abdelkarim Nakkahi - Frontend developer"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div class="portrait-wrapper">
-                <img
-                  src="./assets/images/abdelkarim-nakkahi-frontend-developer.webp"
-                  alt="Abdelkarim Nakkahi - Frontend developer"
-                />
               </div>
             </div>
           </div>
+        </section>
+        <section id="work" class="work">
+          <div class="container"></div>
         </section>
       </article>
     </main>
