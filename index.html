@@ -61,11 +61,11 @@
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Font (Inter) -->
+    <!-- Font (Geist) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -94,7 +94,7 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#work">Projects</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#why-me">Why me</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -107,49 +107,87 @@
         <header class="hero">
           <div class="container">
             <h1 class="headline">
-              Frontend developer building <span class="highlight">modern</span>,
-              <span class="highlight">fast</span> &
-              <span class="highlight">responsive</span> web experiences
+              Frontend developer building modern, fast & responsive web
+              <span>experiences</span>
             </h1>
-            <p>
+            <!-- <p>
               I turn ideas into responsive and interactive web experiences using
               HTML, CSS, JavaScript, and React. Focused on clean UI,
               performance, and modern frontend development practices.
-            </p>
+            </p> -->
+            <div class="line"></div>
             <div class="hero-cta">
-              <a href="#" class="btn btn-portfolio"
-                ><i class="fa-solid fa-arrow-right"></i
-                ><span>View Projects</span>
-              </a>
-              <a href="#" class="btn btn-about">About me </a>
+              <a href="#projects" class="btn btn-portfolio">View Projects </a>
+              <a href="#about" class="btn btn-about">About me </a>
             </div>
           </div>
         </header>
 
+        <section id="projects" class="projects">
+          <div class="container">
+            <h2>Selected Projects</h2>
+            <p>
+              A collection of projects demonstrating my ability to build
+              responsive interfaces, solve frontend challenges, and create
+              engaging user experiences.
+            </p>
+            <div class="projects-wrapper">
+              <div class="project-item">
+                <div class="project-content">
+                  <h3 class="project-title">Todo App</h3>
+                  <p class="project-description">
+                    A small React app to add, edit, and delete tasks. Data is
+                    saved in the browser with localStorage, so your list
+                    survives refresh.
+                  </p>
+                  <div class="project-tools">
+                    <span>React</span><span>CSS</span><span>Vite</span
+                    ><span>LocalStorage</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="taskmanagrr.netlify.app/?ref=abdelkarimnakkahi.com"
+                      class="project-demo"
+                      >View Website <i class="fa-solid fa-link"></i
+                    ></a>
+                    <a
+                      href="https://github.com/abdelkarimnakkahi/task-manager?ref=abdelkarimnakkahi.com"
+                      class="project-code"
+                      >Source code <i class="fa-brands fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="project-image">
+                  <img src="#" alt="Todo App buit by Abdelkarim Nakkahi" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="about" id="about">
           <div class="container">
-            <div class="about-wrapper">
-              <div class="about-content">
-                <h2>About Me</h2>
-                <p class="bio">
-                  I’m a frontend developer focused on building clean,
-                  responsive, and user-friendly web experiences using HTML, CSS,
-                  JavaScript, and React.
-                </p>
-                <p class="bio">
-                  I enjoy transforming ideas into modern interfaces with
-                  attention to performance, responsiveness, and user experience.
-                  I continuously improve my skills by building real projects,
-                  learning modern frontend practices, and exploring technologies
-                  like React and Tailwind CSS.
-                </p>
-                <p class="bio">
-                  Currently looking for my first opportunity where I can
-                  contribute, grow with a strong team, and deliver impactful
-                  digital experiences.
-                </p>
-                <div class="line"></div>
-                <div class="more-info">
+            <h2>About Me</h2>
+            <div class="about-bio">
+              <p class="bio">
+                I’m a frontend developer focused on building clean, responsive,
+                and user-friendly web experiences using HTML, CSS, JavaScript,
+                and React.
+              </p>
+              <p class="bio">
+                I enjoy transforming ideas into modern interfaces with attention
+                to performance, responsiveness, and user experience. I
+                continuously improve my skills by building real projects,
+                learning modern frontend practices, and exploring technologies
+                like React and Tailwind CSS.
+              </p>
+              <p class="bio">
+                Currently looking for my first opportunity where I can
+                contribute, grow with a strong team, and deliver impactful
+                digital experiences.
+              </p>
+            </div>
+            <!-- <div class="more-info">
                   <div class="more-info-content">
                     <div>
                       <h4>Who</h4>
@@ -186,9 +224,7 @@
                       alt="Abdelkarim Nakkahi - Frontend developer"
                     />
                   </div>
-                </div>
-              </div>
-            </div>
+                </div> -->
           </div>
         </section>
         <section id="work" class="work">
