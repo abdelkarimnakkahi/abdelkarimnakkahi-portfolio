@@ -112,4 +112,72 @@ gsap.from(".bio", {
   duration: 1,
   ease: "power3.out",
 });
-// Hero Animation
+// Skills Animation
+gsap.from(".skills-category", {
+  scrollTrigger: {
+    trigger: ".skills",
+    start: "top 70%",
+  },
+  y: 40,
+  opacity: 0,
+  stagger: 0.12,
+  duration: 0.8,
+  ease: "power3.out",
+});
+
+// Why ME Animation
+gsap.utils.toArray(".why-me-card").forEach((card, index) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 85%",
+    },
+
+    x: index % 2 === 0 ? -80 : 80,
+    y: 50,
+    opacity: 0,
+    rotateZ: index % 2 === 0 ? -2 : 2,
+
+    duration: 1.2,
+    ease: "power4.out",
+  });
+});
+
+// Contact Animition
+gsap.from(".contact h2", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 80%",
+  },
+
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  ease: "power4.out",
+});
+
+gsap.from(".contact p", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 80%",
+  },
+
+  y: 40,
+  opacity: 0,
+  delay: 0.2,
+  duration: 1,
+  ease: "power3.out",
+});
+
+gsap.from(".btn-contact", {
+  scrollTrigger: {
+    trigger: ".contact",
+    start: "top 80%",
+  },
+
+  scale: 0.8,
+  opacity: 0,
+  delay: 0.4,
+  duration: 0.8,
+  ease: "back.out(1.7)",
+});
