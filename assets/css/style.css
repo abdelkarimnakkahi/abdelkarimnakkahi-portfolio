@@ -23,8 +23,8 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
   background-color: var(--main-background);
   color: var(--main-text-color);
   font-family: "Inter", sans-serif;
@@ -156,7 +156,7 @@ img {
 .nav-header ul a {
   color: var(--heading-text-color);
   opacity: 0.75;
-  transition: color 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -315,9 +315,6 @@ img {
   position: relative;
 }
 
-.about .container {
-}
-
 .about .about-wrapper {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -340,6 +337,10 @@ img {
 
 .about .bio:last-child {
   margin-bottom: 0;
+}
+
+.about-image img {
+  border-radius: 0.25rem;
 }
 
 /* ------------ Skills ------------ */
