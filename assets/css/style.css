@@ -100,6 +100,7 @@ img {
   font-size: 1.25rem;
   padding: var(--btn-padding);
   position: relative;
+  border-radius: 0.25rem;
 }
 
 .btn::before {
@@ -223,13 +224,6 @@ img {
 
 .hero-cta {
   margin-top: 3rem;
-}
-
-.btn-portfolio {
-  display: inline-block;
-  /* background: var(--accent-color); */
-  color: var(--heading-text-color);
-  border-radius: 0.25rem;
 }
 
 /* ------------ Projects ------------ */
