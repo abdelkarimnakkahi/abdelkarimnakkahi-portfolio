@@ -1,9 +1,9 @@
 :root {
-  --main-background: #050b18;
-  --card-backround: #12183a;
-  --main-text-color: rgba(255, 255, 255, 0.6);
+  --main-background: #071d2b;
+  --card-backround: #0e273a;
+  --main-text-color: #64748b;
   --heading-text-color: #f7faff;
-  --accent-color: #209cee;
+  --accent-color: #0a6fe2;
   --highlight-color: #34d399;
   --btn-padding: 1rem 2rem;
   --radius-sm: 0.25rem;
@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background-color: var(--main-background);
   color: var(--main-text-color);
   font-family: "Inter", sans-serif;
@@ -96,10 +96,31 @@ img {
 }
 
 .btn {
-  color: var(--main-text-color);
+  color: var(--heading-text-color);
   font-size: 1.25rem;
-  transition: color 250ms ease-in-out;
   padding: var(--btn-padding);
+  position: relative;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: var(--accent-color);
+  width: 45%;
+  height: 100%;
+  z-index: -1;
+  transition: width 250ms ease-in-out;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn i {
+  font-size: 1rem;
+  margin-left: 0.5rem;
 }
 
 /* .line {
@@ -206,7 +227,7 @@ img {
 
 .btn-portfolio {
   display: inline-block;
-  background: var(--accent-color);
+  /* background: var(--accent-color); */
   color: var(--heading-text-color);
   border-radius: 0.25rem;
 }
@@ -272,7 +293,6 @@ img {
 
 .project-description {
   margin-bottom: 1.5rem;
-  color: #64748b;
 }
 
 .project-tools {
@@ -283,7 +303,7 @@ img {
 .project-tools span {
   padding: 0.25rem 0.5rem;
   background: var(--main-background);
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(15, 23, 42, 0.8);
   color: var(--highlight-color);
   border-radius: 1rem;
   font-size: 0.85rem;
@@ -355,7 +375,7 @@ img {
 
 .skills-category {
   padding: 2rem;
-  background: rgba(15, 23, 42, 0.5);
+  background-color: var(--card-backround);
   border-radius: 0.25rem;
 }
 
@@ -363,6 +383,12 @@ img {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: -1px;
+}
+
+.skills li {
+  list-style-type: square;
+  list-style-position: inside;
+  /* margin-left: 2rem; */
 }
 
 .skills-category li:not(:last-child) {
@@ -418,11 +444,6 @@ img {
 
 .contact p {
   max-width: 600px;
-}
-
-.btn-contact {
-  background: var(--accent-color);
-  color: var(--heading-text-color);
 }
 
 /* ------------ Footer ------------ */
