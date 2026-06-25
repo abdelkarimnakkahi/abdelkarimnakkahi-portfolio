@@ -101,9 +101,9 @@ gsap.utils.toArray(".project-item").forEach((card, index) => {
 });
 
 // About Animation
-gsap.from(".bio", {
+gsap.from(".about-wrapper", {
   scrollTrigger: {
-    trigger: ".about-bio",
+    trigger: ".about-wrapper",
     start: "top 75%",
   },
   y: 40,
@@ -112,6 +112,7 @@ gsap.from(".bio", {
   duration: 1,
   ease: "power3.out",
 });
+
 // Skills Animation
 gsap.from(".skills-category", {
   scrollTrigger: {

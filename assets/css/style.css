@@ -1,9 +1,9 @@
 :root {
-  --main-background: #071d2b;
-  --card-backround: #0e273a;
+  --main-background: #092435;
+  --card-backround: #0a2d41;
   --main-text-color: #64748b;
   --heading-text-color: #f7faff;
-  --accent-color: #0a6fe2;
+  --accent-color: #0170f5;
   --highlight-color: #34d399;
   --btn-padding: 1rem 2rem;
   --radius-sm: 0.25rem;
@@ -19,7 +19,29 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #145880 var(--main-background);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #145880;
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #145880;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+
+/* Hover effects for WebKit engines */
+html::-webkit-scrollbar-thumb:hover {
+  background: #186c9c; /* Darker color on hover */
 }
 
 body {
@@ -27,7 +49,6 @@ body {
   font-size: 1.1rem;
   background-color: var(--main-background);
   color: var(--main-text-color);
-  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   overflow-x: hidden;
@@ -112,7 +133,7 @@ img {
   width: 45%;
   height: 100%;
   z-index: -1;
-  transition: width 250ms ease-in-out;
+  transition: width 500ms ease-in-out;
 }
 
 .btn:hover::before {
@@ -168,7 +189,8 @@ img {
 }
 
 .logo {
-  width: 40px;
+  color: var(--heading-text-color);
+  width: 2.5rem;
 }
 
 .nav-header nav ul {
@@ -296,8 +318,7 @@ img {
 
 .project-tools span {
   padding: 0.25rem 0.5rem;
-  background: var(--main-background);
-  background: rgba(15, 23, 42, 0.8);
+  background: rgb(15, 50, 75);
   color: var(--highlight-color);
   border-radius: 1rem;
   font-size: 0.85rem;
@@ -323,10 +344,6 @@ img {
 /* ------------ About me ------------ */
 .about {
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
 }
 
 .about .about-wrapper {
@@ -339,18 +356,18 @@ img {
   margin-bottom: 3rem;
 }
 
-.about-bio {
-  margin-top: auto;
-}
-
 .bio {
   margin-bottom: 1.75rem;
-  font-size: 1.35rem;
+  /* font-size: 1.35rem; */
   line-height: 1.75rem;
 }
 
 .about .bio:last-child {
   margin-bottom: 0;
+}
+
+.about-image {
+  max-width: 335px;
 }
 
 .about-image img {
@@ -390,8 +407,8 @@ img {
 }
 
 /* ------------ Why Me ------------ */
-.why-me {
-}
+/* .why-me {
+} */
 
 .why-me .container {
   display: grid;
