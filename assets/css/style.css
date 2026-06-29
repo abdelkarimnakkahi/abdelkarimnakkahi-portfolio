@@ -145,13 +145,12 @@ img {
   margin-left: 0.5rem;
 }
 
-/* .line {
+.line {
   width: 100%;
-  background-color: var(--heading-text-color);
-  opacity: 0.3;
+  background-color: var(--border-color);
   height: 1px;
-  margin-top: 3rem;
-} */
+  margin-top: 2rem;
+}
 
 /* ------------ Main Header ------------ */
 .nav-header {
@@ -392,11 +391,14 @@ img {
 
 .skills-category h3 {
   font-size: 1.5rem;
-  margin-bottom: 2.5rem;
   letter-spacing: -1px;
 }
 
-.skills li {
+.skills-category ul {
+  margin-top: 2rem;
+}
+
+.skills-category li {
   list-style-type: square;
   list-style-position: inside;
   /* margin-left: 2rem; */
@@ -463,7 +465,7 @@ footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem;
   border-top: 1px solid var(--border-color);
 }
 
