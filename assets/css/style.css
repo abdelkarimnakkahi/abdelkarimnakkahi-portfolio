@@ -1,6 +1,6 @@
 :root {
-  --main-background: #092435;
-  --card-backround: #0a2d41;
+  --main-background: #091a28;
+  --card-backround: #0c2030;
   --main-text-color: #64748b;
   --heading-text-color: #f7faff;
   --accent-color: #0170f5;
@@ -21,6 +21,11 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #145880 var(--main-background);
+}
+
+::selection {
+  background-color: var(--highlight-color);
+  color: var(--main-background);
 }
 
 html::-webkit-scrollbar {
@@ -402,6 +407,10 @@ img {
   list-style-type: square;
   list-style-position: inside;
   /* margin-left: 2rem; */
+}
+
+.skills-category li::marker {
+  color: var(--highlight-color);
 }
 
 .skills-category li:not(:last-child) {
