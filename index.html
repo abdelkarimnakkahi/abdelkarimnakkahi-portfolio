@@ -443,10 +443,17 @@
               name="portfolio-contact"
               method="POST"
               data-netlify="true"
+              netlify-honeypot="bot-field"
               id="contact-form"
             >
               <input type="hidden" name="form-name" value="portfolio-contact" />
 
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="bot-field" type="text" />
+                </label>
+              </p>
               <div class="form-group">
                 <input
                   type="text"

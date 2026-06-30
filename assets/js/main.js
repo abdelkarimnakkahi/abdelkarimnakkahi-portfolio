@@ -182,3 +182,31 @@ gsap.from(".btn-contact", {
   duration: 0.8,
   ease: "back.out(1.7)",
 });
+
+// Contact form handling
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      // Success handling
+      formStatus.textContent =
+        "Message sent successfully! I'll get back to you soon.";
+      formStatus.className = "status-success";
+      contactForm.reset();
+    })
+    .catch((error) => {
+      // Error handling
+      formStatus.textContent = "Oops! There was an issue sending your message.";
+      formStatus.className = "status-error";
+    });
+});
