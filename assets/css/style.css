@@ -98,8 +98,13 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  letter-spacing: -1px;
 }
 
 a {
@@ -344,7 +349,7 @@ img {
 
 .about .about-wrapper {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
 }
 
@@ -363,11 +368,12 @@ img {
 }
 
 .about-image {
-  max-width: 335px;
+  /* max-width: 335px; */
 }
 
 .about-image img {
   border-radius: 0.25rem;
+  object-fit: contain;
 }
 
 /* ------------ Skills ------------ */
@@ -376,7 +382,7 @@ img {
 }
 .skills-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -384,11 +390,6 @@ img {
   padding: 2rem;
   background-color: var(--card-backround);
   border-radius: 0.25rem;
-}
-
-.skills-category h3 {
-  font-size: 1.5rem;
-  letter-spacing: -1px;
 }
 
 .skills-category ul {
@@ -415,7 +416,11 @@ img {
 
 .why-me .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.why-me h2 {
+  margin-bottom: 3rem;
 }
 
 .why-me-card {
@@ -445,12 +450,9 @@ img {
 
 /* ------------ Contact ------------ */
 .contact .container {
-  display: flex;
-  gap: 100px;
-}
-
-.contact p {
-  margin: 1rem 0 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
 }
 
 .contact p {
@@ -557,4 +559,98 @@ footer .container {
 
 .right-footer i {
   font-size: 1.75rem;
+}
+
+/* Base Container & Header Settings */
+.nav-header {
+  background-color: #111827; /* Dark background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo-svg {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation Links (Desktop Default) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #34d399; /* Green hue to match your SVG */
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1100;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: #e5e7eb;
+  transition: background 0.2s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #e5e7eb;
+  transition:
+    transform 0.2s ease,
+    top 0.2s ease;
+}
+
+.hamburger::before {
+  top: -6px;
+}
+.hamburger::after {
+  top: 6px;
+}
+
+/* Hide the toggle button on desktop screens */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
 }

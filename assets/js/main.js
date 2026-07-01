@@ -20,6 +20,7 @@
 //   lastScrollY = currentScrollY;
 // });
 
+// Hide nav on scroll down, show on scroll up
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
