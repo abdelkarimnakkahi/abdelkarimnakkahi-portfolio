@@ -266,7 +266,7 @@ img {
 
 .projects-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5rem;
 }
 
@@ -301,7 +301,7 @@ img {
 }
 
 .project-title {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   margin: 1.5rem 0;
 }
 
@@ -336,7 +336,7 @@ img {
 }
 
 .project-demo {
-  margin-right: 2rem;
+  margin-right: 1.25rem;
 }
 
 /* .project-code {
