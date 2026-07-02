@@ -57,6 +57,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* body::before {
@@ -214,6 +215,50 @@ img {
 /* .nav-header.show {
   transform: translateY(0);
 } */
+
+/* Sidebar on mobile */
+.menu,
+.close-sidebar {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 250ms ease-in-out;
+}
+
+.menu {
+  display: none;
+}
+
+.menu:hover,
+.close-sidebar:hover {
+  color: var(--heading-text-color);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--main-background);
+  z-index: 3;
+  width: 100%;
+  height: 100dvh;
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 500ms ease;
+  padding: 1.5rem 3rem;
+}
+
+.sidebar li {
+  margin-top: 2.5rem;
+}
+
+.sidebar a {
+  color: var(--main-text-color);
+  font-size: 1.5rem;
+}
+
+.sidebar a:hover {
+  color: var(--heading-text-color);
+}
 
 /* ------------ Hero Section ------------ */
 .hero {
@@ -471,7 +516,7 @@ form {
 
 .form-group input,
 .form-group textarea,
-button {
+.contact button {
   width: 100%;
   padding: 18px 0;
   background: var(--main-background);
@@ -488,7 +533,7 @@ button {
   opacity: 1;
 }
 
-button,
+.contact button,
 .btn {
   background: var(--highlight-color);
   color: var(--main-background);
@@ -562,6 +607,19 @@ footer .container {
 }
 
 @media (max-width: 768px) {
+  .nav-header ul {
+    display: none;
+  }
+
+  .sidebar,
+  .menu {
+    display: block;
+  }
+
+  /* .sidebar {
+    width: 100%;
+  } */
+
   .projects-wrapper {
     max-width: 31.25rem;
     grid-template-columns: 1fr;

@@ -99,9 +99,23 @@
             <li><a href="#why-me">Why me</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <i
+            onclick="openSidebar()"
+            class="fa-solid fa-bars-staggered menu"
+          ></i>
         </nav>
       </div>
     </header>
+    <div class="sidebar">
+      <ul>
+        <i onclick="closeSidebar()" class="fa-solid fa-xmark close-sidebar"></i>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#why-me">Why me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
 
     <main>
       <article>
@@ -521,7 +535,7 @@
                 ></textarea>
               </div>
 
-              <button type="submit">Send Message</button>
+              <button class="btn-contact" type="submit">Send Message</button>
 
               <div id="form-status" class="hidden"></div>
             </form>

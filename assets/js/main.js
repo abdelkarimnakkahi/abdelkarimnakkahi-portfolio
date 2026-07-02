@@ -21,6 +21,25 @@
 // });
 
 // Hide nav on scroll down, show on scroll up
+
+// Sidebar
+const sidebar = document.querySelector(".sidebar");
+const closeSidebar = () => {
+  sidebar.style.transform = "translateX(100%)";
+};
+
+const openSidebar = () => {
+  sidebar.style.transform = "translateX(0)";
+};
+
+const sidebarLinks = document.querySelectorAll(".sidebar li");
+
+for (let i = 0; i < sidebarLinks.length; i++) {
+  sidebarLinks[i].addEventListener("click", () => {
+    closeSidebar();
+  });
+}
+
 let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
